@@ -20,12 +20,12 @@ function queryParse(query) {
 
 function getUserInfo(id) {
     console.log(id);
-    return $.get(`http://localhost:3000/user/${id}`);
+    return $.get(`${API_URL}/${id}`);
 }
 
 function getUserDegrees(id) {
     console.log(id);
-    return $.get(`http://localhost:3000/user/${id}/degree`);
+    return $.get(`${API_URL}/${id}/degree`);
 }
 
 function addUserInfoToPage(user) {
@@ -53,7 +53,7 @@ function getURL() {
     if (window.location.host.indexOf('localhost') != -1) {
         return 'http://localhost:3000';
     } else {
-        return 'https://cruddydegree.herokuapp.com';
+        return 'https://cruddegree.herokuapp.com';
     }
 }
 

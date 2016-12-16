@@ -16,6 +16,7 @@
         </header>
         <main>
             <section class="user-section"></section>
+            <section class="degree-section"></section>
         </main>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -24,15 +25,18 @@
             <h1>{{name}}
             </h1>
         </script>
-        <!-- <script id="degree-template" type="text/x-handlebars-template">
-            <ul class="list-group">
+        <ul class="list-group">
+            <script id="degree-template" type="text/x-handlebars-template">
                 {{#each degree}}
-                    <li class="list-group-item">{{this.name}}</li>
-                    <li class="list-group-item">{{this.institution}}</li>
-                    <li class="list-group-item">{{this.gpa}}</li>
+                    <li class="list-group-item">Degree:
+                        {{this.name}}</li>
+                    <li class="list-group-item">Institution:
+                        {{this.institution}}</li>
+                    <li class="list-group-item">GPA:
+                        {{this.gpa}}</li>
                 {{/each}}
             </ul>
-        </script> -->
+        </script>
     </body>
 
 </html>

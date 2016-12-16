@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="main.css">
-        <title>CRUD Degrees!</title>
-    </head>
-    <body class="container">
-        <header class="header">
-            <button type="button" class="btn btn-danger button-color">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>CRUD Degrees!</title>
+</head>
+
+<body class="container">
+    <header class="header">
+        <button type="button" class="btn btn-danger button-color">
                 <a href="/">Home</a>
             </button>
-        </header>
-        <main>
-            <script id="user-template" type="text/x-handlebars-template">
-                <h1>{{user.name}}
-                    Degrees</h1>
-                <ul class="list-group">
-                    {{#each degree}}
-                        <li class="list-group-item">{{this.name}}</li>
-                        <li class="list-group-item">{{this.institution}}</li>
-                        <li class="list-group-item">{{this.gpa}}</li>
-                    {{/each}}
-                </ul>
-            </script>
-        </main>
-        <script type="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.amd.js"></script>
-        <script type="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-    </body>
+    </header>
+    <main>
+        <section class="user-section">
+        </section>
+
+        <script id="user-template" type="text/x-handlebars-template">
+            <h1>{{user.name}} Degrees</h1>
+        </script>
+        <ul class="list-group">
+            <script id="degree-template" type="text/x-handlebars-template">
+                {{#each degree}}
+                <li class="list-group-item">{{this.name}}</li>
+                <li class="list-group-item">{{this.institution}}</li>
+                <li class="list-group-item">{{this.gpa}}</li>
+                {{/each}}
+        </ul>
+        </script>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.amd.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
 </html>

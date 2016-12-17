@@ -19,17 +19,14 @@ function queryParse(query) {
 }
 
 function getUserInfo(id) {
-    console.log(id);
     return $.get(`${API_URL}/${id}`);
 }
 
 function getUserDegrees(id) {
-    console.log(id);
     return $.get(`${API_URL}/${id}/degree`);
 }
 
 function addUserInfoToPage(user) {
-    console.log(user);
     let source = $('#user-template').html();
     let template = Handlebars.compile(source);
     let context = user;
@@ -39,7 +36,6 @@ function addUserInfoToPage(user) {
 }
 
 function addUserDegrees(degree) {
-    console.log(degree);
     let source = $('#degree-template').html();
     let template = Handlebars.compile(source);
     let context = {

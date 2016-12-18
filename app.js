@@ -49,7 +49,7 @@ function getURL() {
     if (window.location.host.indexOf('localhost') != -1) {
         return 'http://localhost:3000';
     } else {
-        return 'https://cruddegree.herokuapp.com';
+        return 'https://cruddegree.herokuapp.com/user';
     }
 }
 

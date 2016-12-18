@@ -19,11 +19,11 @@ function queryParse(query) {
 }
 
 function getUserInfo(id) {
-    return $.get(`${API_URL}/${id}`);
+    return $.get(`${API_URL}/user/${id}`);
 }
 
 function getUserDegrees(id) {
-    return $.get(`${API_URL}/${id}/degree`);
+    return $.get(`${API_URL}/user/${id}/degree`);
 }
 
 function addUserInfoToPage(user) {
@@ -49,7 +49,7 @@ function getURL() {
     if (window.location.host.indexOf('localhost') != -1) {
         return 'http://localhost:3000';
     } else {
-        return 'https://cruddegree.herokuapp.com/user';
+        return 'https://cruddegree.herokuapp.com/';
     }
 }
 
